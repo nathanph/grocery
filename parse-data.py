@@ -1,6 +1,7 @@
 __author__ = 'Nathan Hernandez'
 
 import sys
+import itertools
 
 def main():
 
@@ -28,6 +29,46 @@ def main():
             file.write("\t"+upc+"\t"+str(user_data[customer][upc])+"\n")
         file.write("\n")
 
+#    for customer_one in user_data:
+#       for customer_two in user_data:
+#           if customer_one is not customer_two:
+#               print("Customer "+str(customer_one)+" & "+str(customer_two))
+#               print(manhattan(user_data[customer_one], user_data[customer_two]))
+
+    for customer in user_data:
+        print(str(customer))
+        # print(nearest_neighbor(customer, user_data))
+        print(recommend(customer, user_data))
+
+def recommend(customer, user_data):
+    # first find nearest neighbor
+    nearest = nearest_neighbor(customer, user_data)[0][1]
+    recommendations = []
+    # now find bands neighbor rated that user didn't
+    neighbor_purchases = user_data[nearest]
+    user_purchases = user_data[customer]
+    for upc in neighbor_purchases:
+        if not upc in user_purchases:
+            recommendations.append((upc, neighbor_purchases[upc]))
+    # using the fn sorted for variety - sort is more efficient
+    return sorted(recommendations, key=lambda product_tuple: int(product_tuple[1]), reverse = True)
+
+def manhattan(user_one, user_two):
+    distance = 0
+    for key in user_one:
+        if key in user_two:
+            distance += abs(int(user_one[key]) - int(user_two[key]))
+    return distance
+
+def nearest_neighbor(customer, user_data):
+    distances = []
+    for user in user_data:
+        if user != customer:
+            distance = manhattan(user_data[user], user_data[customer])
+            distances.append((distance, user))
+    # sort based on distance -- closest first
+    distances.sort()
+    return distances
 
 def print_user_data(user_data):
     for user in user_data:
