@@ -21,7 +21,8 @@ Drive sales using big data analysis to suggest products and offer relevant sales
 - Web interface
 
 ## Problems
-- Staple goods
+- False positives  
+- Staple goods  
 
 ## Scalability
 - Scales very well  
