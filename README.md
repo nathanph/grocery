@@ -1,5 +1,6 @@
 # Grocery Recommendations
-Project for #hackathonclt.
+Project for #hackathonclt.  
+Team (5) Nathan
 
 ## Objective
 Predict, model, plan and present the best, most attractive and creative ways to deliver groceries to customers.
