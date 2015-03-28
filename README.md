@@ -6,14 +6,14 @@ Predict, model, plan and present the best, most attractive and creative ways to 
 
 ## Execution
 Why do users have groceries delivered?  
-	- Convienence
+	- Convienence  
 Capitalize on convience by focusing on product prediction and suggestion.  
 Use big data analysis to suggest products and offer relevant sales at optimal times.  
 	- Pandora of groceries
 
 ## Implementation
-- Collaborative filtering
-- Target users instead of carts
+- Collaborative filtering  
+- Target users instead of carts  
 
 # Demo
 - 
