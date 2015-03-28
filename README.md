@@ -17,9 +17,12 @@ Use big data analysis to suggest products and offer relevant sales at optimal ti
 - Target users instead of carts  
 
 # Demo
-- 
+- Web interface
 
 ## Problems
+- Staple goods
 
 ## Scalability
-- 
+- Scales very well  
+- Ideal for Hadoop  
+
