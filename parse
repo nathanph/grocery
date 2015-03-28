@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cat customer_sample.bsv | sed "
