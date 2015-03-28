@@ -29,16 +29,34 @@ def main():
             file.write("\t"+upc+"\t"+str(user_data[customer][upc])+"\n")
         file.write("\n")
 
+    products = {}
+    with open("products") as file:
+        for line in file:
+            fields = line.split("|")
+            upc = fields[0]
+            description = fields[1]
+            products[upc] = description[0:-1]
+
+
 #    for customer_one in user_data:
 #       for customer_two in user_data:
 #           if customer_one is not customer_two:
 #               print("Customer "+str(customer_one)+" & "+str(customer_two))
 #               print(manhattan(user_data[customer_one], user_data[customer_two]))
 
+    file = open("recommendations", "w")
+
     for customer in user_data:
-        print(str(customer))
+        file.write(str(customer)+"\n")
         # print(nearest_neighbor(customer, user_data))
-        print(recommend(customer, user_data))
+        show_top = 5
+        for recommendation in recommend(customer, user_data):
+            if show_top>0:
+                file.write("\t"+str(recommendation[0])+" "+str(recommendation[1])+" "+str(products[recommendation[0]])+"\n")
+                show_top-=1
+            else:
+                break
+        file.write("\n")
 
 def recommend(customer, user_data):
     # first find nearest neighbor
