@@ -9,8 +9,9 @@ Why do users have groceries delivered?
 - Convienence  
 
 Capitalize on convience by focusing on product prediction and suggestion.  
-Use big data analysis to suggest products and offer relevant sales at optimal times.  
-- Pandora of groceries
+- Pandora of groceries  
+
+Drive sales using big data analysis to suggest products and offer relevant sales at optimal times.  
 
 ## Implementation
 - Collaborative filtering  
