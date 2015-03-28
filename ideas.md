@@ -1,6 +1,12 @@
 # Grocery Hackathon
 Predict, model, plan and present the best, most attractive and creative ways to deliver groceries to customers.
 
+## IPs
+204.15.96.216
+204.15.96.217
+204.15.96.218
+204.15.96.219
+
 ## Objectives
 - Predict
 - Model
