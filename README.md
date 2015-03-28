@@ -17,7 +17,7 @@ Drive sales using big data analysis to suggest products and offer relevant sales
 - Collaborative filtering  
 - Target users instead of carts  
 
-# Demo
+## Demo
 - Web interface
 
 ## Problems
